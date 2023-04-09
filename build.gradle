@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        coil_version = "2.3.0"
+        compose_version = "1.4.1"
+        destinations_version = "1.8.38-beta"
+        hilt_version = "2.45"
+        kotlin_version = "1.8.10"
+        ktor_version = "2.2.4"
+        lifecycle_version = "2.6.1"
+    }
+
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+plugins {
+    id "com.android.application" version "7.4.2" apply false
+    id "com.android.library" version "7.4.2" apply false
+    id "org.jetbrains.kotlin.android" version "$kotlin_version" apply false
+
+    // Will get a missing version error if kotlin_version is changed, but at
+    // least you know to update?
+    id "com.google.devtools.ksp" version "$kotlin_version-1.0.9" apply false
+
+    id "org.jetbrains.kotlin.kapt" version "$kotlin_version" apply false
+    id "com.google.dagger.hilt.android" version "$hilt_version" apply false
+    id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version" apply false
+}

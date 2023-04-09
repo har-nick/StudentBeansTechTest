@@ -1,3 +1,10 @@
 # Default ignored files
+/androidTestResultsUserPreferences.xml
+/assetWizardSettings.xml
+/caches
+/gradle.xml
+/libraries
+/modules.xml
 /shelf/
+/navEditor.xml
 /workspace.xml
